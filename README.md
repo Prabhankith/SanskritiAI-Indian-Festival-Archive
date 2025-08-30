@@ -1,5 +1,5 @@
 
-# 🎉 Regional Festivals & Celebrations App
+# 🎉SanskritiAI: Indian Festival Archive
 
 A community-driven Streamlit app that archives and shares Indian festivals, rituals, and cultural celebrations.
 
