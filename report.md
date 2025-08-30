@@ -58,6 +58,7 @@ Translation: Festival descriptions are translated into multiple Indian languages
 Supervisor Controls: Admins can delete uploaded media if necessary.
 
 4. Implementation
+
 4.1 Key Features
 
 Home Page: Overview and instructions.
