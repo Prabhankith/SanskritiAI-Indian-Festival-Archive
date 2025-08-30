@@ -1,0 +1,38 @@
+# Ignore virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg-info/
+*.egg
+
+# Streamlit & app cache
+.streamlit/
+uploads/
+
+# Local database (don’t push real data to GitHub)
+*.db
+*.sqlite3
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE/project files
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Environment files (keep secrets local)
+.env
+*.env
