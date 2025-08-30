@@ -1,6 +1,14 @@
 📑 Project Report
 
 Project Title: SanskritiAI – Indian Festival Archive
+| Name                            | Role                                   | Responsibilities                                                                  |
+| ------------------------------- | -------------------------------------- | --------------------------------------------------------------------------------- |
+| **Karthik Balaji Sirimilla**    | Project Lead / Product Manager         | Define project scope & features, manage sprint goals, coordinate team progress    |
+| **Prabhankith**                 | Full-Stack Developer                   | Build Streamlit UI, integrate SQLite database, develop festival submission forms  |
+| **Pooja Nalajala**              | AI Engineer                            | Implement AI translation using Deep Translator, ensure multilingual accuracy      |
+| **Agulla Prasanna**             | UI/UX Designer & Engagement Strategist | Design user-friendly layouts, apply Streamlit themes, add icons & navigation      |
+| **Varshitha Sri Sai Nallapudi** | QA & Testing Lead                      | Test app on multiple devices/browsers, report bugs, validate file upload/deletion |
+
 
 1. Introduction
 
