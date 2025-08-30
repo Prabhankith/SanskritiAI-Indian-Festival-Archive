@@ -1,193 +1,119 @@
-📄 INDIAN FESTIVALS: Culture Collector – Preserving Heritage Through AI
-1.1 Team Information
-Name	Role	Responsibilities
-Saketh	Project Lead / Product Manager	Define app features, manage sprint goals, coordinate team progress
-Sony	Full-Stack Developer	Build Streamlit UI, integrate SQLite storage, create submission forms
-Adil	AI Engineer	Implement translation module (MarianMT), test multilingual outputs
-Divya	UI/UX Designer & Engagement Strategist	Design user-friendly layouts, add themes, icons, improve navigation
-Himashu	QA & Testing Lead	Cross-device/browser testing, handle bug tracking, check safe deletion of files
-1.2 Application Overview – MVP Scope
+📑 Project Report
 
-Project Name: INDIAN FESTIVALS – Culture Collector
+Project Title: SanskritiAI – Indian Festival Archive
 
-Problem Statement: India is home to thousands of festivals across regions, religions, and communities. Much of this cultural heritage remains undocumented, scattered, or at risk of being lost in oral and local traditions. Current AI systems also lack exposure to culturally rich text describing these festivals. This project aims to crowdsource festival knowledge, storing it in structured form while enabling translation into multiple languages for accessibility.
+1. Introduction
 
-MVP Objective
-Build a Streamlit Web App where users can:
+India is a land of diverse cultures, languages, and traditions. Festivals are a significant aspect of its heritage, representing unity in diversity. However, there is no centralized digital repository that documents these festivals in an accessible and interactive way.
 
-Submit festival details (name, date, description, region, image).
+This project, SanskritiAI, is a Streamlit-based web application that aims to digitally preserve and present Indian festivals. It allows users to:
 
-View festivals on a calendar and in a searchable database.
+Submit festival details with descriptions and media.
 
-Translate festival descriptions into English or other languages.
+Explore festivals through a chronological calendar.
 
-Safely handle missing/deleted images without breaking UI.
+Search festivals by keywords.
 
-Optimize for offline-first usage (local storage with SQLite).
+Translate festival descriptions into multiple Indian languages using AI.
 
-1.3 AI Integration Details
+2. Objectives
 
-AI Modules in MVP:
+To design a corpus collection engine for Indian festivals.
 
-Translation – Festival descriptions can be translated into English (or other languages) using Hugging Face MarianMT models.
+To provide multilingual support for accessibility.
 
-Future Scope:
+To enable supervised content management (upload + delete functionality).
 
-Text-to-Speech (TTS) for hearing festival descriptions in native language.
+To create a user-friendly Streamlit web interface for browsing and searching cultural data.
 
-Semantic search (search by meaning, not exact keyword).
+3. Methodology
+3.1 Tools & Frameworks
 
-Automatic tagging (religion, region, type of festival).
+Frontend & App Framework: Streamlit
 
-All AI features are implemented with open-source libraries for transparency and offline-friendly design.
+Database: SQLite
 
-1.4 Technical Architecture & Development
+AI Translation: Deep Translator (Google Translate backend)
 
-Tech Stack
+Programming Language: Python
 
-Frontend: Streamlit (Python)
+3.2 System Workflow
 
-Backend: SQLite (local database storage)
+Data Collection: Users can submit new festival entries (name, region, date, description, media).
 
-AI Processing: Hugging Face Transformers (MarianMT for translation)
+Data Storage: Entries are stored in SQLite database with optional images/videos.
 
-Deployment: Streamlit Cloud / Hugging Face Spaces
+Search & Retrieval: Full-text search (FTS5) allows retrieval by keywords.
 
-Database
+Translation: Festival descriptions are translated into multiple Indian languages using AI.
 
-Stored in data/festivals.db
+Supervisor Controls: Admins can delete uploaded media if necessary.
 
-Contains tables for festival details and metadata
+4. Implementation
+4.1 Key Features
 
-Images stored in images/ folder with safe checks
+Home Page: Overview and instructions.
 
-Development Breakdown
+Submit Festival: Form to add festivals with optional media (image/video).
 
-Day	Focus	Deliverables
-1	App structure & UI	Streamlit pages (Home, Submit, Calendar, Search)
-2	Database logic	SQLite schema + CRUD operations
-3	AI Integration	Translation of festival descriptions
-4	Calendar & Search	Calendar display + keyword search
-5	File Safety	Graceful handling of deleted images
-6	Testing & polish	Cross-device checks, bug fixes
-7	Deployment	Push to Hugging Face / Streamlit Cloud
-1.5 User Testing & Feedback (Week 2)
+Festival Calendar: Chronological list of festivals with translations and media previews.
 
-Methodology
-Tested with:
+Search Festivals: Keyword search using SQLite FTS5.
 
-Students and community members interested in culture
+AI-Powered Translation: Descriptions can be instantly translated into Hindi, Tamil, Telugu, Bengali (extendable).
 
-Rural users with low bandwidth connections
+Supervisor Media Deletion: Admins can remove uploaded files if inappropriate.
+4.2 Sample Preloaded Festivals
 
-Different devices (mobiles, laptops, browsers)
+| Festival | Region      | Date        | Description                            |
+| -------- | ----------- | ----------- | -------------------------------------- |
+| Diwali   | Pan India   | 20-Oct-2025 | Festival of Lights.                    |
+| Pongal   | Tamil Nadu  | 15-Jan-2025 | Harvest festival dedicated to Sun God. |
+| Bihu     | Assam       | 14-Apr-2025 | Assamese New Year & harvest festival.  |
+| Holi     | North India | 14-Mar-2025 | Festival of colors & spring.           |
 
-Testing Tasks
+5. AI Integration
 
-Submit new festivals (with and without images)
+The AI component of this project is the automatic multilingual translation of festival descriptions.
 
-Translate descriptions
+Library Used: deep-translator
 
-Use calendar navigation and search
+Languages Supported: Hindi, Tamil, Telugu, Bengali (extendable)
 
-Check deleted/missing image behavior
+Why AI? This ensures accessibility for people across India who may prefer different languages, making the archive inclusive.
 
-Feedback Loop
+Fallback: If translation fails, the app shows an error message gracefully without breaking.
 
-Feedback Theme	Insights Collected	Actions Taken
-Missing image errors	App crashed if image was deleted	Added safe check to skip images
-Translation clarity	Some outputs too literal	Added “optional edit after translation”
-Calendar UX	Users wanted hover details	Improved tooltips and descriptions
-Mobile experience	Long text wrapping poorly	Adjusted CSS/styling for readability
-1.6 Project Lifecycle & Roadmap
-Week 1: MVP Build & Deployment
+6. Results
 
-Objective: Working app with database + translation
+Successfully built an AI-powered cultural archive.
 
-Deliverables: Submission form, calendar, search, AI translation
+Users can submit, browse, and search festivals seamlessly.
 
-Week 2: Beta Testing & Iterations
+Descriptions can be translated into Indian languages instantly.
 
-Objective: Collect real user feedback
+Application supports supervised deletion of uploaded media.
 
-Methodology: Tested under low bandwidth, mobile-first conditions
+Data is stored locally in SQLite with easy retrieval.
 
-Expected Outcomes: Improved UI, translation flow, safe file handling
+7. Conclusion
 
-Weeks 3–4: Scaling & Outreach Campaign
+This project demonstrates how technology and AI can preserve India’s cultural diversity. By creating a centralized, multilingual, and searchable archive of festivals, SanskritiAI provides a scalable solution for documenting intangible heritage.
 
-Target Audience: Schools, cultural clubs, WhatsApp groups, heritage communities
+The project meets the internship requirements by:
 
-Execution:
+Designing a corpus collection engine.
 
-Daily “Festival Fact” campaign on social media
+Adding AI functionality (translation).
 
-Direct outreach to student groups for contributions
+Providing a clean, professional codebase with Streamlit.
 
-Metrics:
+8. Future Scope
 
-Target: 1000+ festival entries across 20+ states
+Expand to support all Indian languages.
 
-Measure: Active users, number of contributions, language coverage
+Add festival clustering & recommendation using embeddings.
 
-Post-Internship Vision & Sustainability
+Deploy the app on Streamlit Cloud / Hugging Face Spaces for wider access.
 
-Future Features
-
-Community “Festival of the Day” voting
-
-AI clustering of festivals by region/religion
-
-TTS + voice input for accessibility
-
-Community Building
-
-Encourage cultural groups and schools to contribute
-
-Public leaderboard to recognize top contributors
-
-Scaling
-
-Extend to include rituals, foods, songs linked to festivals
-
-Build an open corpus for AI cultural research
-
-2. Code Repository Submission
-
-Repository: [To be added]
-
-Contents
-
-app.py
-
-requirements.txt
-
-.gitignore
-
-README.md
-
-REPORT.md
-
-data/festivals.db (sample dataset)
-
-images/ (festival posters/photos)
-
-3. Live Application Link
-
-Deployment target: Hugging Face Spaces / Streamlit Cloud
-
-4. Demo Video (5–7 mins)
-
-A walkthrough covering:
-
-Purpose of the app
-
-Submitting festivals
-
-AI-powered translation
-
-Calendar & search features
-
-Offline-first usage
-
-🔒 End of Report
+Enable crowdsourced moderation for verifying festival data.
